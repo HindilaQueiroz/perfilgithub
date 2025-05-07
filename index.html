@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Perfil no GitHub</title>
+    <link rel="stylesheet" href="/styles/caixalogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- caixa principal com a logo -->
+      <!-- Elipses fora da caixa principal -->
+      <div class="elipse1"></div>
+      <div class="elipse2"></div>
+  
+      <div class="caixa-principal">
+          <div class="titulo-principal">
+              <img src="/assets/logogithub.svg" alt="logo GitHub" class="logogithub">
+              <h1 class="titulo">Perfil</h1>
+              <img src="/assets/nomegithub.svg" alt="logo GitHub" class="nomegithub">
+          </div>
+  
+          <!-- campo de busca -->
+          <div class="campo-busca">
+              <input type="text" id="usuario" class="campo-busca1" placeholder="Digite um perfil do GitHub">
+              <button onclick="buscarUsuario()" class="botao">
+                  <img src="/assets/lupa.svg" alt="Buscar" class="lupa">
+              </button>
+          </div>
+  
+          <!-- Perfil encontrado -->
+          <div id="resultado" class="caixa-perfil" style="display:none;"></div>
+  
+          <!-- Perfil não encontrado -->
+          <div class="retangulo-mensagem" id="caixa-erro" style="display:none;">
+              <div id="mensagem" class="mensagem"></div>
+          </div>
+      </div>
+  
+      <script src="/js/buscagithub.js"></script>
+  </body>
+
+
+  
