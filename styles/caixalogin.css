@@ -1,0 +1,409 @@
+
+body {
+    /*background: linear-gradient(to bottom, #0e1829, #000);*/
+    background: rgba(31, 31, 31, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impede rolagem geral (horizontal e vertical) */
+  }
+
+  /* Elipses de fundo */
+.elipse1, .elipse2 {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.elipse1 {
+  width: 45vw;
+  max-width: 1440px;
+  height: 45vw;
+  top: -40vh;
+  left: 96%;
+  transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.elipse2 {
+  width: 45vw;
+  max-width: 1440px;
+  height: 45vw;
+  top: 40vh;
+  left: -30vw;
+  background: radial-gradient(50% 50% at 50% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*TELA 1 - LOGIN/
+/*Caixa do fundo onde temos a elipse*/ 
+.caixa-principal {
+    max-width: 1156px;
+    width: 90%;
+    max-height: 537px;
+    height:60%;
+    background: rgba(0, 0, 0, 1);
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha tudo verticalmente no centro */
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+  }
+  
+  /* logo vom gatinho do github*/
+  .logogithub {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    display: inline-block;
+  }
+  
+  /*palavra perfil*/
+  .titulo {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+    line-height: 1;
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  /*imagem da logo GitHub*/
+  .nomegithub {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+  }
+  
+
+/* Busca do Perfil */
+.campo-busca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+.campo-busca1 {
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    padding: 0 15px;
+    font-size: 18px;
+  }
+  
+  /*texto dentro do campo busca*/
+  .campo-busca1::placeholder {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+/* Botão da lupa */  
+.botao {
+    width: 57px;
+    height: 57px;
+    background: rgba(0, 92, 255, 1);
+    border: none;
+    border-radius: 10px;
+    margin-left: -59px;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Imagem da lupa */
+.lupa {
+    width: 30px;
+    height: 30px;
+  }
+
+/* TELA 2 - PERFIL ENCONTRADO */
+.caixa-perfil {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens no topo */
+  justify-content: center;
+  gap: 30px;
+  border-radius: 25px;
+  background: rgba(217, 217, 217, 1);
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 800px;
+  height: 75%;
+  max-height: 250px;
+  margin: 20px auto;
+  text-align: left;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-top: -08px;
+}
+
+/*foto do perfil no git hub*/
+.imagem-foto-perfil {
+  width: 180px;
+  height: 180px;
+  border: 2px solid rgba(0, 92, 255, 1);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -8px;
+}
+
+/*campo  titulo + bio*/
+.group-texto-perfil {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Garante o alinhamento à esquerda */
+  gap: 10px;
+}
+
+/* Bloco que organiza imagem + textos lado a lado */
+.perfil-conteudo {
+  display: flex;
+  align-items: flex-start; /* Alinha o texto ao topo da imagem */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/*titulo do perfil - nome do usuario*/
+.titulo-texto {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 92, 255, 1);
+  margin: 0;
+  line-height: 1.2;
+  margin-top: 32px;
+}
+
+/*texto da bia*/
+.texto {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* TELA 3 - PERFIL NÃO ENCONTRADO */
+/*texto de que o perfil não foi localizado*/
+.mensagem {
+    font-size: 20px;
+    color: rgba(255, 0, 0, 1);
+    font-weight: 600;
+  }
+
+/*campo onde a mensagem será demonstrada*/
+.retangulo-mensagem {
+    display: none; /* Oculto por padrão */
+    background: rgba(217, 217, 217, 1);
+    border-radius: 10px;
+    padding: 5px 40px;
+    text-align: center;
+    max-width: 700px;
+    width: 90%;
+    margin: 20px auto 0;
+    margin-top: -1;
+  }
+
+ /*MEDIA QUERY PARA CELULARES (ATÉ 768px)*/ 
+  @media (max-width: 768px) {
+    .caixa-principal {
+      width: 95%;
+      padding: 20px;
+      max-height: none;
+      height: auto;
+    }
+  
+    .titulo-principal {
+      flex-wrap: wrap;
+      gap: 12px;
+      text-align: center;
+    }
+  
+    .titulo {
+      font-size: 42px;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .nomegithub {
+      width: 120px;
+    }
+  
+   .campo-busca {
+      width: 100%;
+      position: relative;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0;
+    }
+  
+    .campo-busca1 {
+      width: 90%;
+      height: 50px;
+      font-size: 16px;
+      padding-right: 45px; 
+      box-sizing: border-box;
+    }
+  
+    .botao {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .lupa {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .caixa-perfil {
+      flex-direction: column;
+      align-items: center;
+      max-height: none;
+      height: auto;
+      text-align: center;
+      padding: 20px;
+      width: 90%;
+    }
+
+    .imagem-foto-perfil {
+      margin: 0 auto 20px auto; 
+      width: 140px;
+      height: 140px;
+      display: block;
+    }
+      
+    .group-texto-perfil {
+      align-items: center;
+      max-width: 100%;
+    }
+  
+    .titulo-texto {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  
+    .texto {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .retangulo-mensagem {
+      font-size: 16px;
+      width: 90%;
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  
+
+/*MEDIA QUERY PARA CELULARES (ATÉ 360px)*/ 
+@media (max-width: 360px) {
+  .titulo {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .logogithub {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nomegithub {
+    width: 100px;
+  }
+
+  .campo-busca {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+  }
+
+  .campo-busca1 {
+    width: 90%;
+    height: 50px;
+    font-size: 16px;
+    padding-right: 50px;  
+  }
+
+  .botao {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .lupa {
+    width: 20px;
+    height: 20px;
+  }
+
+  .caixa-perfil {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    height: auto;
+    max-height: none;
+    text-align: center;
+  }
+
+  .imagem-foto-perfil {
+    margin-top: 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  .group-texto-perfil {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .titulo-texto {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .texto {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .retangulo-mensagem {
+    width: 90%; 
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-top: 15px;
+  }
+}
+
